@@ -24,6 +24,18 @@ import org.jacoco.core.data.ExecutionDataStore;
  * This example reads Java class files, directories or JARs given as program
  * arguments and dumps information about the classes.
  */
+/**
+ * 分析class信息，包括：
+ * class name:   com/cqrcb/ncbs/CodeCoverage/App  类名
+ * class id:     3f3ba0079713120c  
+ * instructions: 7            类指令数，包括括号，不包括空格
+ * branches:     0            类分支数
+ * lines:        3			      类代码行数，包括类名，方法名，不包括括号，空格
+ * methods:      2            类中方法数，包含默认构造方法
+ * complexity:   2            类复杂度
+ * @author zj
+ *
+ */
 public final class ClassInfo implements ICoverageVisitor {
 
 	private final PrintStream out;
@@ -55,6 +67,7 @@ public final class ClassInfo implements ICoverageVisitor {
 	}
 
 	public void visitCoverage(final IClassCoverage coverage) {
+		//类名
 		out.printf("class name:   %s%n", coverage.getName());
 		out.printf("class id:     %016x%n", Long.valueOf(coverage.getId()));
 		out.printf("instructions: %s%n", Integer.valueOf(coverage
