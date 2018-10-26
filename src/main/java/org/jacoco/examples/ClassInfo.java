@@ -69,15 +69,21 @@ public final class ClassInfo implements ICoverageVisitor {
 	public void visitCoverage(final IClassCoverage coverage) {
 		//类名
 		out.printf("class name:   %s%n", coverage.getName());
+		//类ID
 		out.printf("class id:     %016x%n", Long.valueOf(coverage.getId()));
+		//类指令数
 		out.printf("instructions: %s%n", Integer.valueOf(coverage
 				.getInstructionCounter().getTotalCount()));
+		//类分支数
 		out.printf("branches:     %s%n",
 				Integer.valueOf(coverage.getBranchCounter().getTotalCount()));
+		//类中代码行数
 		out.printf("lines:        %s%n",
 				Integer.valueOf(coverage.getLineCounter().getTotalCount()));
+		//类中代码方法数
 		out.printf("methods:      %s%n",
 				Integer.valueOf(coverage.getMethodCounter().getTotalCount()));
+		//类负载度
 		out.printf("complexity:   %s%n%n", Integer.valueOf(coverage
 				.getComplexityCounter().getTotalCount()));
 	}

@@ -104,6 +104,7 @@ public final class CoreTutorial {
 	 *             in case of errors
 	 */
 	public void execute() throws Exception {
+		//被分析覆盖率的类
 		final String targetName = TestTarget.class.getName();
 
 		// For instrumentation and runtime we need a IRuntime instance
