@@ -25,8 +25,16 @@ import org.jacoco.core.runtime.RemoteControlWriter;
  * <code>tcpserver</code> and requests execution data. The collected data is
  * dumped to a local file.
  */
+/**
+ * 将远程服务器的服务dump到本地生产jacoco-client.exec
+ * 
+ * 
+ * @author zj
+ *
+ */
 public final class ExecutionDataClient {
 
+	//
 	private static final String DESTFILE = "jacoco-client.exec";
 
 	private static final String ADDRESS = "localhost";
